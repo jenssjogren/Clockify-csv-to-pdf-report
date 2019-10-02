@@ -18,21 +18,21 @@ from tkinter import Tk
 from tkinter.filedialog import askopenfilename, askdirectory
 
 # -------- Constants -------- #
-VERSION = '0.1'
-USER = 0
-EMAIL = 1
-CLIENT = 2
-PROJECT = 3
-TASK = 4
-DESCRIPTION = 5
-BILLABLE = 6
-START_DATE = 7
-START_TIME = 8
-END_DATE = 9
-END_TIME = 10
-DURATION_H = 11
-DURATION_DECIMAL = 12
-TAGS = 13
+VERSION = '0.11'
+USER = 4
+EMAIL = 5
+CLIENT = 1
+PROJECT = 0
+TASK = 3
+DESCRIPTION = 2
+BILLABLE = 7
+START_DATE = 8
+START_TIME = 9
+END_DATE = 10
+END_TIME = 11
+DURATION_H = 12
+DURATION_DECIMAL = 13
+TAGS = 6
 HOURLY_RATE = 14
 AMOUNT_SEK = 15
 
@@ -129,6 +129,7 @@ text = html_strings.HTML_1 + user_input_period + html_strings.HTML_2 + \
        user_input_name + html_strings.HTML_3
 
 total_time = 0
+
 for project in projects:
     keys = project.get_tasks().keys()
     values = project.get_tasks().values()
